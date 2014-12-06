@@ -9,5 +9,11 @@ class RecipesController < ApplicationController
 	end
 
 	def create
-	end	
+	end
+
+	private
+
+	def find_recipe
+		@recipe = Recipe.find(params[:id])
+	end
 end
