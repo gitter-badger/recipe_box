@@ -26,7 +26,7 @@ class RecipesController < ApplicationController
 	end
 
 	def update
-		if @recipe.udpate(recipe_params)
+		if @recipe.update(recipe_params)
 			redirect_to @recipe
 		else
 			render 'edit'
