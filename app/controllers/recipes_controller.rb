@@ -22,6 +22,22 @@ class RecipesController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+		if @recipe.udpate(recipe_params)
+			redirect_to @recipe
+		else
+			render 'edit'
+		end
+	end
+
+	def destroy
+		@recipe.detroy
+		redirect_to root_path, notice: "Cette recette a bien été supprimée !"
+	end
+
 	private
 
 	def recipe_params
