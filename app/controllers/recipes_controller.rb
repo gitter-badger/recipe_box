@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
 	end
 
 	def destroy
-		@recipe.detroy
+		@recipe.destroy
 		redirect_to root_path, notice: "Cette recette a bien été supprimée !"
 	end
 
