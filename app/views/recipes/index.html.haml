@@ -2,3 +2,5 @@
 
 - @recipes.each do |recipe|
 	%h2= link_to recipe.title, recipe
+
+= link_to "Nouvelle recette", new_recipe_path, class: "btn btn-default"
